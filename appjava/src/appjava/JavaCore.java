@@ -1,6 +1,9 @@
 package appjava;
 
+import java.util.Scanner;
+
 public class JavaCore {
+	public static Scanner myObj = new Scanner(System.in);
 	void continues() {
 		for (int i = 1; i <= 10; i++) {
 			if (i == 5) {
@@ -26,5 +29,28 @@ public class JavaCore {
 			}
 		}
 		return fn;
+	}
+	
+	public void richrac() {
+		int n;
+		System.out.print("nhập n: ");
+		n = myObj.nextInt();
+		for(int i = 0; i < n; i++ ) {
+			if(i % 2 == 1) {
+				for(int t = (i+1)*n; t>= i*n +1; t--) {
+					System.out.print(t + " ");
+					if(t<= i*n+1) {
+						System.out.println();
+					}
+				}
+			}else {
+				for(int t = i*n + 1; t<= (i+1)*n; t++) {
+					System.out.print(t + " ");
+					if(t>= (i+1)*n) {
+						System.out.println();
+					}
+				}
+			}
+		}
 	}
 }
