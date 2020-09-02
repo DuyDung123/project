@@ -1,5 +1,7 @@
 package appjava;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class JavaCore {
@@ -52,5 +54,29 @@ public class JavaCore {
 				}
 			}
 		}
+	}
+	
+	public void bai01() {
+		System.out.println("tìm chố chia hết cho 7 nhưng không chia hết cho 5");
+		System.out.print("nhập khoảng từ N: ");
+		int n = myObj.nextInt();
+		System.out.print("đến khoảng M: ");
+		int m = myObj.nextInt();
+		System.out.print("số chia hết: ");
+		int a = myObj.nextInt();
+		System.out.print("số không chia hết: ");
+		int b = myObj.nextInt();
+		List<Integer> list = new ArrayList<Integer>();
+		for(int i = n; i <= m; i++) {
+			if(i % a == 0 && i % b !=0) {
+				list.add(i);
+			}
+		}
+		System.out.print(list);
+//		if(list != null && !list.isEmpty()) {
+//			for(int i : list) {
+//				System.out.print(i + ", ");
+//			}
+//		}
 	}
 }
